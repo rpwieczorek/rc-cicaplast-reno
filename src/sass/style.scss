@@ -242,7 +242,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px 2px;
+      gap: 15px 3px;
     }
     &__single {
       margin: 0 auto;
@@ -256,12 +256,12 @@ body {
     }
     &__image {
       @include img;
-      max-width: 135px;
+      max-width: 165px;
       margin: 10px auto;
       transition: all 0.3s;
     }
     &__item {
-      max-width: 135px;
+      max-width: 165px;
       @include text;
       margin: 0 auto;
       font-size: 11px;
@@ -269,6 +269,32 @@ body {
       font-family: $regular;
       font-weight: 100;
       text-align: left;
+    }
+  }
+  @media screen and (min-width: 720px) {
+    .es-ingr {
+      &__single {
+        flex-basis: 24.5%;
+      }
+      &__image {
+        max-width: 165px;
+      }
+      &__item {
+        max-width: 165px;
+      }  
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .es-ingr {
+      &__single {
+        flex-basis: 49%;
+      }
+      &__image {
+        max-width: 165px;
+      }
+      &__item {
+        max-width: 165px;
+      }  
     }
   }
   .es-use {
@@ -435,15 +461,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .es-ingr {
-    &__wrapper {
-      flex-wrap: nowrap  !important;
-    }
-    &__single {
-      flex-basis: 20% !important;
-      width: 135px  !important;
-    }
-  }
   .es-cross {
     &__container {
       width: 768px;
