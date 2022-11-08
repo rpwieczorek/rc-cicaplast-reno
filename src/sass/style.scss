@@ -81,6 +81,7 @@ body {
       align-items: center;
       justify-content: flex-end;
     }
+
     &__left {
       text-align: center;
       text-transform: uppercase;
@@ -90,14 +91,13 @@ body {
       opacity: 0;
       animation: slideright 0.8s ease forwards;
       animation-delay: 0.9s;
-
       & span {
         font-size: 18px;
         color: #009de5;
       }
     }
     &__title {
-      margin: 0 auto;
+      margin: 20px auto 0 auto;
       padding: 5px 10px;
       background-color: #009de5;
       width: fit-content;
@@ -115,9 +115,32 @@ body {
       opacity: 0;
       animation: slideleft 0.8s ease forwards;
       animation-delay: 0.9s;
-      & img {
-        padding-right: 40px;
-        max-width: 270px;
+
+    }
+    &__nr1 {
+      padding-top: 40px;
+      // padding-right: 40px;
+      max-width: 270px;
+    }
+    &__ptp {
+      padding-top: 20px;
+      padding-right: 40px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 5px;
+    }
+    &__image {
+      @include img;
+      width: 70px;
+      height: 70px;
+    }
+    &__text {
+      @include text;
+      text-transform: uppercase;
+      font-family: $regular;
+      & span {
+        font-family: $medium;
       }
     }
   }
@@ -299,6 +322,7 @@ body {
   }
   .es-use {
     margin: 32px auto;
+    background-color: #5dafe1;
     &__wrapper {
       min-height: 334px;
       background: url('../images/bg-use.png') no-repeat;
@@ -307,6 +331,7 @@ body {
     }
     &__title {
       @include text;
+      color:#fff;
       margin: 20px 10px;
       font-size: 28px;
       text-transform: uppercase;
@@ -316,9 +341,15 @@ body {
         font-weight: 500;
       }
     }
+    &__left {
+      width: 90%;
+      padding: 15px;
+      margin: 0 auto;
+    }
     &__subtitle {
       @include text;
-      font-size: 16px;
+      color: #fff;
+      font-size: 18px;
       margin: 14px 10px;
       font-weight: 100;
       & span {
@@ -464,7 +495,7 @@ body {
   .es-cross {
     &__container {
       width: 768px;
-      height: 998px;
+      height: 1156px;
       background: url('../images/bg-cross.png') no-repeat;
       background-size: cover;
       background-position: center;
@@ -489,16 +520,20 @@ body {
       position: absolute;
       text-align: left;
       &--1 {
-        left: 20px;
-        top: 20px;
+        right: 20px;
+        top: 70px;
       }
       &--2 {
-        right: 20px;
+        left: 20px;
         top: 300px;
       }
       &--3 {
+        right: 20px;
+        top: 590px;
+      }
+      &--4 {
         left: 20px;
-        top: 520px;
+        top: 800px;
       }
     }
   }
@@ -516,6 +551,9 @@ body {
       width: 70%;
       order: 2;
     }
+    &__title {
+      margin: 40px 0 0 auto !important;
+    }
     &__left {
       order: 1;
       width: 40%;
@@ -523,10 +561,7 @@ body {
         text-align: right;
       }
     }
-    &__title {
-      margin-right: 0;
-      margin-left: auto;
-    }
+
   }
   .es-use {
     margin: 32px auto;
@@ -544,6 +579,7 @@ body {
       top: 5%;
       left: 5%;
       z-index: 5;
+      width: 40% !important;
     }
   }
 }
