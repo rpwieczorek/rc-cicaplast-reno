@@ -74,14 +74,11 @@ body {
     }
     &__wrapper {
       min-height: 290px;
-      background: url('../images/bg-kv.png') no-repeat;
-      background-size: cover;
-      background-position: right ;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
-
     &__left {
       text-align: center;
       text-transform: uppercase;
@@ -95,6 +92,20 @@ body {
         font-size: 18px;
         color: #009de5;
       }
+    }
+    &__packshot {
+      width: 20%;
+      &--image{
+        @include img;
+        min-width: 100px;
+        padding-left: 20px;
+        
+      }
+    }
+    &__right {
+      opacity: 0;
+      animation: slideleft 0.8s ease forwards;
+      animation-delay: 0.9s;
     }
     &__title {
       margin: 20px auto 0 auto;
@@ -111,20 +122,12 @@ body {
       animation: slideright 0.8s ease forwards;
       animation-delay: 0.9s;
     }
-    &__right {
-      opacity: 0;
-      animation: slideleft 0.8s ease forwards;
-      animation-delay: 0.9s;
-
-    }
     &__nr1 {
-      padding-top: 40px;
       // padding-right: 40px;
       max-width: 270px;
     }
     &__ptp {
       padding-top: 20px;
-      padding-right: 40px;
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
@@ -139,6 +142,7 @@ body {
       @include text;
       text-transform: uppercase;
       font-family: $regular;
+      text-align: left;
       & span {
         font-family: $medium;
       }
@@ -540,19 +544,14 @@ body {
 
 }
 
-@media screen and (min-width: 713px) {
+@media screen and (min-width: 600px) {
   .es-kv {
-    &__container {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-    }
-    &__wrapper {
-      width: 70%;
-      order: 2;
-    }
+
     &__title {
       margin: 40px 0 0 auto !important;
+    }
+    &__wrapper {
+      justify-content: space-around;
     }
     &__left {
       order: 1;
@@ -560,6 +559,14 @@ body {
       & p {
         text-align: right;
       }
+    }
+    &__packshot {
+      order: 2;
+    }
+    &__right{
+      width: 40%;
+      order: 3;
+      text-align: center;
     }
 
   }
